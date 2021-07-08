@@ -4,7 +4,7 @@ while True:
 	ret, img = vid.read()
 	img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 	img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-	hand = cv2.CascadeClassifier('haad.xml')
+	hand = cv2.CascadeClassifier('haad.xml')#https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml
 	found = hand.detectMultiScale(img_gray, 1.1, 4)
 	amount_found = len(found)
 	for (x, y, width, height) in found:
