@@ -5,7 +5,7 @@ if img is None:
     sys.exit("Could not read the image.")
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-hand=cv2.CascadeClassifier('the name of the haarcascade file')
+head=cv2.CascadeClassifier('head.xml')#https://raw.githubusercontent.com/opencv/opencv/master/data/haarcascades/haarcascade_frontalface_default.xml
 found = hand.detectMultiScale(img_gray,1.1,4)
 amount_found = len(found)
 
